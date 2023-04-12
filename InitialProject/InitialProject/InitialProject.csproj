@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject>InitialProject.App</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="View\Owner\ReservationRequests.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Data\accommodations.csv" />
+    <None Remove="Resources\Data\guestRatings.csv" />
+    <None Remove="Resources\Data\TextFile1.txt" />
+    <None Remove="Resources\Images\add.png" />
+    <None Remove="Resources\Images\bell.png" />
+    <None Remove="Resources\Images\bell_notification.png" />
+    <None Remove="Resources\Images\delete.png" />
+    <None Remove="Resources\Images\edit.png" />
+    <None Remove="Resources\Images\info.png" />
+    <None Remove="Resources\Images\tour_picture.jpg" />
+    <None Remove="Resources\Images\tour_picture1.jpg" />
+    <None Remove="Resources\Images\tour_picture2.jpg" />
+    <None Remove="Resources\Images\view.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="View\Owner\ReservationRequests.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Images\add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\delete.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\edit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\view.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\bell.png" />
+    <Resource Include="Resources\Images\bell_notification.png" />
+    <Resource Include="Resources\Images\info.png" />
+    <Resource Include="Resources\Images\tour_picture.jpg" />
+    <Resource Include="Resources\Images\tour_picture1.jpg" />
+    <Resource Include="Resources\Images\tour_picture2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
